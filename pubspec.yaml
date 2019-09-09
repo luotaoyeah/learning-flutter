@@ -72,6 +72,6 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   fonts:
-    - family: Segoe UI
+    - family: FangSong
       fonts:
-        - asset: fonts/segoeui.ttf
+        - asset: fonts/fangsong.ttf

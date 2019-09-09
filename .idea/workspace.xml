@@ -4,13 +4,10 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e733180d-61c5-40f0-b175-6f62f818ee2c" name="Default Changelist" comment="chore: migrate to androidX">
-      <change afterPath="$PROJECT_DIR$/fonts/segoeui.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e733180d-61c5-40f0-b175-6f62f818ee2c" name="Default Changelist" comment="feat(cookbook.design.fonts): use a custom font">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/segoeui.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/fangsong.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,7 +34,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -108,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567856891688</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat(cookbook.design.fonts): use a custom font">
+      <created>1568025103002</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568025103002</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,7 +135,8 @@
     <MESSAGE value="chore: update README.md" />
     <MESSAGE value="chore: commit .idea" />
     <MESSAGE value="chore: migrate to androidX" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: migrate to androidX" />
+    <MESSAGE value="feat(cookbook.design.fonts): use a custom font" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(cookbook.design.fonts): use a custom font" />
   </component>
   <component name="masterDetails">
     <states>

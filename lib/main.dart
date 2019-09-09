@@ -6,19 +6,29 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var wordPair = WordPair.random();
-
     return MaterialApp(
         title: 'FLUTTER',
         theme: ThemeData(
-            fontFamily: "Segoe UI",
-            textTheme: TextTheme(body1: TextStyle(letterSpacing: 0.3))),
+          fontFamily: "FangSong",
+        ),
         home: Scaffold(
             appBar: AppBar(
               title: Text('我的标题'),
             ),
             body: Center(
-              child: Text(wordPair.asPascalCase),
+              child: RandomWords(),
             )));
+  }
+}
+
+class RandomWords extends StatefulWidget {
+  @override
+  RandomWordsState createState() => RandomWordsState();
+}
+
+class RandomWordsState extends State<RandomWords> {
+  @override
+  Widget build(BuildContext context) {
+    return Text(WordPair.random().asPascalCase);
   }
 }
