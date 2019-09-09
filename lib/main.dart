@@ -11,13 +11,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           fontFamily: "FangSong",
         ),
-        home: Scaffold(
-            appBar: AppBar(
-              title: Text('我的标题'),
-            ),
-            body: Center(
-              child: RandomWords(),
-            )));
+        home: RandomWords());
   }
 }
 
@@ -27,8 +21,41 @@ class RandomWords extends StatefulWidget {
 }
 
 class RandomWordsState extends State<RandomWords> {
+  final _suggesstions = <WordPair>[];
+  final _fontStyle = const TextStyle(fontSize: 18.0);
+
   @override
   Widget build(BuildContext context) {
-    return Text(WordPair.random().asPascalCase);
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('随机单词'),
+        ),
+        body: _buildSuggesstions());
+  }
+
+  Widget _buildSuggesstions() {
+    return ListView.builder(
+        padding: const EdgeInsets.all(5.0),
+        itemBuilder: (context, i) {
+          if (i.isOdd) {
+            return Divider();
+          }
+
+          final index = i ~/ 2;
+          if (index >= _suggesstions.length) {
+            _suggesstions.addAll(generateWordPairs().take(10));
+          }
+
+          return _buildRow(_suggesstions[index]);
+        });
+  }
+
+  Widget _buildRow(WordPair suggesstion) {
+    return ListTile(
+      title: Text(
+        suggesstion.asPascalCase,
+        style: _fontStyle,
+      ),
+    );
   }
 }
