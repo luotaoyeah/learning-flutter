@@ -84,8 +84,8 @@ class RandomWordsState extends State<RandomWords> {
   }
 
   void _pushSaved() {
-    Navigator.of(context).push(MaterialPageRoute(
-      builder: (BuildContext context) {
+    Navigator.of(context).push(PageRouteBuilder(
+      pageBuilder: (x, y, z) {
         final Iterable<ListTile> tiles = _saved.map((WordPair wordPair) {
           return ListTile(
             title: Text(
@@ -107,6 +107,7 @@ class RandomWordsState extends State<RandomWords> {
           ),
         );
       },
+      transitionDuration: const Duration(milliseconds: 0),
     ));
   }
 }
