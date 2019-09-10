@@ -24,7 +24,7 @@ class RandomWords extends StatefulWidget {
 class RandomWordsState extends State<RandomWords> {
   final List<WordPair> _suggesstions = <WordPair>[];
   final Set<WordPair> _saved = Set();
-  final TextStyle _biggerFont = const TextStyle(fontSize: 18.0);
+  final TextStyle _biggerFont = const TextStyle();
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class RandomWordsState extends State<RandomWords> {
 
   Widget _buildSuggesstions() {
     return ListView.builder(
-        padding: const EdgeInsets.all(5.0),
+        padding: const EdgeInsets.all(0.0),
         itemBuilder: (context, i) {
           if (i.isOdd) {
             return Divider();
@@ -65,6 +65,15 @@ class RandomWordsState extends State<RandomWords> {
         alreadySaved ? Icons.favorite : Icons.favorite_border,
         color: alreadySaved ? Colors.red : null,
       ),
+      onTap: () {
+        setState(() {
+          if (alreadySaved) {
+            _saved.remove(pair);
+          } else {
+            _saved.add(pair);
+          }
+        });
+      },
     );
   }
 }
