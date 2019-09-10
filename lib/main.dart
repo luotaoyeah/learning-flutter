@@ -31,6 +31,12 @@ class RandomWordsState extends State<RandomWords> {
     return Scaffold(
       appBar: AppBar(
         title: Text('随机单词'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.list),
+            onPressed: _pushSaved,
+          )
+        ],
       ),
       body: _buildSuggesstions(),
     );
@@ -75,5 +81,32 @@ class RandomWordsState extends State<RandomWords> {
         });
       },
     );
+  }
+
+  void _pushSaved() {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (BuildContext context) {
+        final Iterable<ListTile> tiles = _saved.map((WordPair wordPair) {
+          return ListTile(
+            title: Text(
+              wordPair.asPascalCase,
+              style: _biggerFont,
+            ),
+          );
+        });
+
+        final List<Widget> divided =
+            ListTile.divideTiles(context: context, tiles: tiles).toList();
+
+        return Scaffold(
+          appBar: AppBar(
+            title: Text('收藏'),
+          ),
+          body: ListView(
+            children: divided,
+          ),
+        );
+      },
+    ));
   }
 }
