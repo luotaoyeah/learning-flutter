@@ -7,11 +7,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'FLUTTER',
-        theme: ThemeData(
-          fontFamily: "FangSong",
-        ),
-        home: RandomWords());
+      title: '西方小镇',
+      theme: ThemeData(
+        fontFamily: "FangSong",
+      ),
+      home: RandomWords(),
+    );
   }
 }
 
@@ -21,16 +22,18 @@ class RandomWords extends StatefulWidget {
 }
 
 class RandomWordsState extends State<RandomWords> {
-  final _suggesstions = <WordPair>[];
-  final _fontStyle = const TextStyle(fontSize: 18.0);
+  final List<WordPair> _suggesstions = <WordPair>[];
+  final Set<WordPair> _saved = Set();
+  final TextStyle _biggerFont = const TextStyle(fontSize: 18.0);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('随机单词'),
-        ),
-        body: _buildSuggesstions());
+      appBar: AppBar(
+        title: Text('随机单词'),
+      ),
+      body: _buildSuggesstions(),
+    );
   }
 
   Widget _buildSuggesstions() {
@@ -50,11 +53,17 @@ class RandomWordsState extends State<RandomWords> {
         });
   }
 
-  Widget _buildRow(WordPair suggesstion) {
+  Widget _buildRow(WordPair pair) {
+    final bool alreadySaved = _saved.contains(pair);
+
     return ListTile(
       title: Text(
-        suggesstion.asPascalCase,
-        style: _fontStyle,
+        pair.asPascalCase,
+        style: _biggerFont,
+      ),
+      trailing: Icon(
+        alreadySaved ? Icons.favorite : Icons.favorite_border,
+        color: alreadySaved ? Colors.red : null,
       ),
     );
   }
