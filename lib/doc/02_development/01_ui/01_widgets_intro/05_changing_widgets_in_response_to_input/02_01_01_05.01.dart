@@ -1,29 +1,11 @@
 import 'package:flutter/material.dart';
 
-/// https://flutter.dev/docs/development/ui/widgets-intro#changing-widgets-in-response-to-input
-class X0201010105 extends StatelessWidget {
-  X0201010105();
-
+class X020101010501 extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Changing Widgets In Response To Input',
-          style: TextStyle(letterSpacing: -0.5),
-        ),
-      ),
-      body: _X01(),
-    );
-  }
+  State<X020101010501> createState() => _X020101010501State();
 }
 
-class _X01 extends StatefulWidget {
-  @override
-  State<_X01> createState() => _X01State();
-}
-
-class _X01State extends State<_X01> {
+class _X020101010501State extends State<X020101010501> {
   int _counter = 0;
 
   void _increment() {
@@ -35,13 +17,14 @@ class _X01State extends State<_X01> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: RaisedButton(
-        color: Colors.blue,
-        child: Text(
-          _counter.toString(),
-          style: TextStyle(color: Colors.white),
-        ),
-        onPressed: _increment,
+      child: Column(
+        children: <Widget>[
+          Text(_counter.toString()),
+          RaisedButton(
+            child: Icon(Icons.add),
+            onPressed: _increment,
+          ),
+        ],
       ),
     );
   }
