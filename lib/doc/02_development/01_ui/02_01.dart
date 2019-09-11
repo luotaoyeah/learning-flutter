@@ -8,12 +8,12 @@ class X0201 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("User Interface"),
+        title: Text("User Interface", style: TextStyle(letterSpacing: -0.5)),
       ),
       body: ListView(
         children: ListTile.divideTiles(tiles: [
           ListTile(
-            title: Text("Introduction To Widgets"),
+            title: Text("Introduction To Widgets", style: TextStyle(letterSpacing: -0.5)),
             onTap: () {
               Navigator.of(context).push(
                 PageRouteBuilder(pageBuilder: (x, y, z) {

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
+/// https://flutter.dev/docs/development/ui/widgets-intro#basic-widgets
 class X0201010102 extends StatelessWidget {
-  /// https://flutter.dev/docs/development/ui/widgets-intro#basic-widgets
   X0201010102();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Basic Widgets'),
+        title: Text('Basic Widgets', style: TextStyle(letterSpacing: -0.5)),
       ),
       body: Material(
         child: Column(

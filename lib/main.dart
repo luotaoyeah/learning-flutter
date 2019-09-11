@@ -11,7 +11,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'LEARNING-FLUTTER',
       theme: ThemeData(
-        fontFamily: "FangSong",
+        fontFamily: "simfang",
       ),
       home: DocMenu(),
     );
@@ -24,10 +24,7 @@ class DocMenu extends StatefulWidget {
 }
 
 class DocMenuState extends State<DocMenu> {
-  final List<Menu> _menus = [
-    Menu("Get Started", X01()),
-    Menu("Development", X02())
-  ];
+  final List<Menu> _menus = [Menu("Get Started", X01()), Menu("Development", X02())];
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +36,7 @@ class DocMenuState extends State<DocMenu> {
         children: ListTile.divideTiles(
           tiles: _menus.map(
             (m) => ListTile(
-              title: Text(m.title),
+              title: Text(m.title, style: TextStyle(letterSpacing: -0.5)),
               onTap: () {
                 Navigator.of(context).push(PageRouteBuilder(
                   pageBuilder: (x, y, z) => m.component,

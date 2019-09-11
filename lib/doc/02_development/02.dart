@@ -7,12 +7,12 @@ class X02 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Development"),
+        title: Text("Development", style: TextStyle(letterSpacing: -0.5)),
       ),
       body: ListView(
         children: ListTile.divideTiles(tiles: [
           ListTile(
-            title: Text("User Interface"),
+            title: Text("User Interface", style: TextStyle(letterSpacing: -0.5)),
             onTap: () {
               Navigator.of(context).push(
                 PageRouteBuilder(
