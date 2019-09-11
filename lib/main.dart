@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'doc/01_get_started/doc_01.dart';
-import 'doc/02_development/01_ui/01_widgets_intro/doc_02_01_01.01.dart';
+import 'doc/01_get_started/01.dart';
+import 'doc/02_development/02.dart';
 
 void main() => runApp(App());
 
@@ -25,8 +25,8 @@ class DocMenu extends StatefulWidget {
 
 class DocMenuState extends State<DocMenu> {
   final List<Menu> _menus = [
-    Menu("Get Started", Doc01()),
-    Menu("Development", Doc02010101())
+    Menu("Get Started", X01()),
+    Menu("Development", X02())
   ];
 
   @override
@@ -43,7 +43,6 @@ class DocMenuState extends State<DocMenu> {
               onTap: () {
                 Navigator.of(context).push(PageRouteBuilder(
                   pageBuilder: (x, y, z) => m.component,
-                  transitionDuration: const Duration(milliseconds: 0),
                 ));
               },
             ),

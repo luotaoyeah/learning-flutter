@@ -2,7 +2,7 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
 /// https://flutter.dev/docs/get-started/install
-class Doc01 extends StatelessWidget {
+class X01 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RandomWords();
@@ -100,7 +100,6 @@ class RandomWordsState extends State<RandomWords> {
           ),
         );
       },
-      transitionDuration: const Duration(milliseconds: 0),
     ));
   }
 }
