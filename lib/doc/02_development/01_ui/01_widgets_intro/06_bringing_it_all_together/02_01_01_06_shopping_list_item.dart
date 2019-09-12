@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+
+import '02_01_01_06_product.dart';
+
+class X0201010106ShoppingListItem extends StatelessWidget {
+  final Product product;
+  final bool inCart;
+  final void Function({Product product, bool inCart}) onInCartChanged;
+
+  X0201010106ShoppingListItem({this.product, this.inCart, this.onInCartChanged}) : super(key: ObjectKey(product));
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: CircleAvatar(
+        child: Text(
+          product.name[0],
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: inCart ? Colors.black54 : Theme.of(context).primaryColor,
+      ),
+      onTap: () {
+        onInCartChanged(product: product, inCart: inCart);
+      },
+      title: Text(
+        product.name,
+        style: TextStyle(
+            letterSpacing: -0.5,
+            color: inCart ? Colors.black54 : null,
+            decoration: inCart ? TextDecoration.lineThrough : null),
+      ),
+    );
+  }
+}
