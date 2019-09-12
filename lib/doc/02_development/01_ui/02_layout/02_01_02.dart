@@ -10,19 +10,21 @@ class X020102 extends StatelessWidget {
         title: Text("Building Layouts", style: TextStyle(letterSpacing: -0.5)),
       ),
       body: ListView(
-        children: ListTile.divideTiles(tiles: [
-          ListTile(
-            title: Text("Layouts In Flutter", style: TextStyle(letterSpacing: -0.5)),
-            onTap: () {
-              Navigator.of(context).push(
-                PageRouteBuilder(pageBuilder: (x, y, z) {
-                  return X02010201();
-                }),
-              );
-            },
-          ),
-        ], context: context)
-            .toList(),
+        children: ListTile.divideTiles(
+          tiles: [
+            ListTile(
+              title: Text("Layouts In Flutter", style: TextStyle(letterSpacing: -0.5)),
+              onTap: () {
+                Navigator.of(context).push(
+                  PageRouteBuilder(
+                    pageBuilder: (x, y, z) => X02010201(),
+                  ),
+                );
+              },
+            ),
+          ],
+          context: context,
+        ).toList(),
       ),
     );
   }

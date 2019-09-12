@@ -9,10 +9,10 @@ class X0201020101 extends StatelessWidget {
         title: Text('Lay Out A Widget', style: TextStyle(letterSpacing: -0.5)),
       ),
       body: Center(
-        child: Text(
-          "TODO",
-          style: TextStyle(fontSize: 28),
-          textDirection: TextDirection.ltr,
+        child: Icon(
+          Icons.star,
+          color: Colors.red,
+          size: 256,
         ),
       ),
     );

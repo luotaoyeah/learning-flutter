@@ -10,21 +10,24 @@ class X02 extends StatelessWidget {
         title: Text("Development", style: TextStyle(letterSpacing: -0.5)),
       ),
       body: ListView(
-        children: ListTile.divideTiles(tiles: [
-          ListTile(
-            title: Text("User Interface", style: TextStyle(letterSpacing: -0.5)),
-            onTap: () {
-              Navigator.of(context).push(
-                PageRouteBuilder(
-                  pageBuilder: (x, y, z) {
-                    return X0201();
-                  },
-                ),
-              );
-            },
-          ),
-        ], context: context)
-            .toList(),
+        children: ListTile.divideTiles(
+          tiles: [
+            ListTile(
+              title: Text(
+                "User Interface",
+                style: TextStyle(letterSpacing: -0.5),
+              ),
+              onTap: () {
+                Navigator.of(context).push(
+                  PageRouteBuilder(
+                    pageBuilder: (x, y, z) => X0201(),
+                  ),
+                );
+              },
+            ),
+          ],
+          context: context,
+        ).toList(),
       ),
     );
   }
