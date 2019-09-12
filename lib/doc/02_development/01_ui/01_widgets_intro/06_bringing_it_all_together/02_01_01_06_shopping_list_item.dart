@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import '02_01_01_06_product.dart';
 
-class X0201010106ShoppingListItem extends StatelessWidget {
+class X02010106ShoppingListItem extends StatelessWidget {
   final Product product;
   final bool inCart;
   final void Function({Product product, bool inCart}) onInCartChanged;
 
-  X0201010106ShoppingListItem({this.product, this.inCart, this.onInCartChanged}) : super(key: ObjectKey(product));
+  X02010106ShoppingListItem({this.product, this.inCart, this.onInCartChanged}) : super(key: ObjectKey(product));
 
   @override
   Widget build(BuildContext context) {

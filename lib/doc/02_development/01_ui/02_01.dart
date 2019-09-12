@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '01_widgets_intro/02_01_01.dart';
+import '02_layout/02_01_02.dart';
 
 /// https://flutter.dev/docs/development/ui/widgets-intro
 class X0201 extends StatelessWidget {
@@ -17,7 +18,17 @@ class X0201 extends StatelessWidget {
             onTap: () {
               Navigator.of(context).push(
                 PageRouteBuilder(pageBuilder: (x, y, z) {
-                  return X02010101();
+                  return X020101();
+                }),
+              );
+            },
+          ),
+          ListTile(
+            title: Text("Building Layouts", style: TextStyle(letterSpacing: -0.5)),
+            onTap: () {
+              Navigator.of(context).push(
+                PageRouteBuilder(pageBuilder: (x, y, z) {
+                  return X020102();
                 }),
               );
             },

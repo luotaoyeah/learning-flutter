@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter/common/app_menu.dart';
 
-import '../../../../common/app_menu.dart';
-import '02_01_01.01.dart';
 import '02_01_01.02.dart';
 import '02_01_01.03.dart';
 import '02_01_01.04.dart';
@@ -10,15 +9,15 @@ import '05_changing_widgets_in_response_to_input/02_01_01_05.dart';
 import '06_bringing_it_all_together/02_01_01_06.dart';
 
 /// https://flutter.dev/docs/development/ui/widgets-intro
-class X02010101 extends StatelessWidget {
+class X020101 extends StatelessWidget {
   final List<AppMenu> _menus = [
-    AppMenu(title: 'Introduction To Widgets', widget: X0201010101()),
-    AppMenu(title: 'Basic Widgets', widget: X0201010102()),
-    AppMenu(title: 'Using Material Components', widget: X0201010103()),
-    AppMenu(title: 'Handling Gestures', widget: X0201010104()),
-    AppMenu(title: 'Changing Widgets In Response To Input', widget: X0201010105()),
-    AppMenu(title: 'Bringing It All Together', widget: X0201010106()),
-    AppMenu(title: 'Responding To Widget Lifecycle Events', widget: X0201010107()),
+    AppMenu(title: 'Introduction To Widgets', widget: X020101()),
+    AppMenu(title: 'Basic Widgets', widget: X02010102()),
+    AppMenu(title: 'Using Material Components', widget: X02010103()),
+    AppMenu(title: 'Handling Gestures', widget: X02010104()),
+    AppMenu(title: 'Changing Widgets In Response To Input', widget: X02010105()),
+    AppMenu(title: 'Bringing It All Together', widget: X02010106()),
+    AppMenu(title: 'Responding To Widget Lifecycle Events', widget: X02010107()),
   ];
 
   @override
@@ -30,18 +29,16 @@ class X02010101 extends StatelessWidget {
       body: ListView(
         children: ListTile.divideTiles(
             tiles: _menus.map(
-                  (menu) {
-                return ListTile(
-                  title: Text(menu.title, style: TextStyle(letterSpacing: -0.5)),
-                  onTap: () {
-                    Navigator.of(context).push(
+                  (menu) =>
+                  ListTile(
+                    title: Text(menu.title, style: TextStyle(letterSpacing: -0.5)),
+                    onTap: () =>
+                        Navigator.of(context).push(
                       PageRouteBuilder(
                         pageBuilder: (x, y, z) => menu.widget,
                       ),
-                    );
-                  },
-                );
-              },
+                        ),
+                  ),
             ),
             context: context)
             .toList(),

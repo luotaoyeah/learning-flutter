@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// https://flutter.dev/docs/development/ui/widgets-intro#basic-widgets
-class X0201010102 extends StatelessWidget {
-  X0201010102();
-
+class X02010102 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

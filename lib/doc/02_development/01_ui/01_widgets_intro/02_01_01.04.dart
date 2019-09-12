@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// https://flutter.dev/docs/development/ui/widgets-intro#handling-gestures
-class X0201010104 extends StatelessWidget {
-  X0201010104();
-
+class X02010104 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

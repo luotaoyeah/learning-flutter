@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 /// https://flutter.dev/docs/development/ui/widgets-intro#responding-to-widget-lifecycle-events
-class X0201010107 extends StatefulWidget {
+class X02010107 extends StatefulWidget {
   @override
-  State<X0201010107> createState() => _X0201010107State();
+  State<X02010107> createState() => _X02010107State();
 }
 
-class _X0201010107State extends State<X0201010107> {
+class _X02010107State extends State<X02010107> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
