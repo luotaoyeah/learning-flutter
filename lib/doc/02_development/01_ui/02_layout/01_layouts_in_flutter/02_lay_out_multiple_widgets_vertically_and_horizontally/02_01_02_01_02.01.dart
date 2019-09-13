@@ -13,7 +13,7 @@ class X020102010201 extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Image.asset("assets/ava7ttar.jpg"),
+              Image.asset("assets/avatar.jpg"),
               Image.asset("assets/avatar.jpg"),
               Image.asset("assets/avatar.jpg"),
             ],

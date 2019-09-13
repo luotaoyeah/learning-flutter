@@ -20,18 +20,17 @@ class X0201 extends StatelessWidget {
       body: ListView(
         children: ListTile.divideTiles(
           tiles: _menus.map(
-                (menu) =>
-                ListTile(
-                  title: Text(
-                    menu.title,
-                    style: TextStyle(letterSpacing: -0.5),
-                  ),
-                  onTap: () {
-                    Navigator.of(context).push(
-                      PageRouteBuilder(pageBuilder: (x, y, z) => menu.widget),
-                    );
-                  },
-                ),
+            (menu) => ListTile(
+              title: Text(
+                menu.title,
+                style: TextStyle(letterSpacing: -0.5),
+              ),
+              onTap: () {
+                Navigator.of(context).push(
+                  PageRouteBuilder(pageBuilder: (x, y, z) => menu.widget),
+                );
+              },
+            ),
           ),
           context: context,
         ).toList(),

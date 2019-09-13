@@ -19,8 +19,7 @@ class X02010201 extends StatelessWidget {
       ),
       body: ListView(
         children: ListTile.divideTiles(
-          tiles: _menus.map((m) =>
-              ListTile(
+          tiles: _menus.map((m) => ListTile(
                 title: Text(m.title, style: TextStyle(letterSpacing: -0.5)),
                 onTap: () {
                   Navigator.of(context).push(
