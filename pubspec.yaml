@@ -45,10 +45,36 @@ flutter:
   assets:
     - assets/avatar.jpg
     - assets/pavlova.jpg
+    - assets/pic0.jpg
     - assets/pic1.jpg
     - assets/pic2.jpg
     - assets/pic3.jpg
     - assets/pic4.jpg
+    - assets/pic5.jpg
+    - assets/pic6.jpg
+    - assets/pic7.jpg
+    - assets/pic8.jpg
+    - assets/pic9.jpg
+    - assets/pic10.jpg
+    - assets/pic11.jpg
+    - assets/pic12.jpg
+    - assets/pic13.jpg
+    - assets/pic14.jpg
+    - assets/pic15.jpg
+    - assets/pic16.jpg
+    - assets/pic17.jpg
+    - assets/pic18.jpg
+    - assets/pic19.jpg
+    - assets/pic20.jpg
+    - assets/pic21.jpg
+    - assets/pic22.jpg
+    - assets/pic23.jpg
+    - assets/pic24.jpg
+    - assets/pic25.jpg
+    - assets/pic26.jpg
+    - assets/pic27.jpg
+    - assets/pic28.jpg
+    - assets/pic29.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

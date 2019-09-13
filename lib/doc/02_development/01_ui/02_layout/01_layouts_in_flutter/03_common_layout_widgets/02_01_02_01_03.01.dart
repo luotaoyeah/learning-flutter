@@ -12,19 +12,19 @@ class X020102010301 extends StatelessWidget {
         decoration: BoxDecoration(color: Colors.black26),
         child: Column(
           children: <Widget>[
-            _buildRow(),
-            _buildRow(),
+            _buildRow(1),
+            _buildRow(3),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildRow() {
+  Widget _buildRow(int index) {
     return Row(
       children: <Widget>[
-        _buildImage(0),
-        _buildImage(1),
+        _buildImage(index),
+        _buildImage(index + 1),
       ],
     );
   }
@@ -37,7 +37,7 @@ class X020102010301 extends StatelessWidget {
           borderRadius: const BorderRadius.all(Radius.circular(8)),
         ),
         margin: const EdgeInsets.all(4),
-        child: Image.asset("assets/pic${index + 1}.jpg"),
+        child: Image.asset("assets/pic$index.jpg"),
       ),
     );
   }
