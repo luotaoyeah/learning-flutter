@@ -70,8 +70,16 @@ class X02010202 extends StatelessWidget {
       appBar: AppBar(
         title: Text("Tutorial", style: TextStyle(letterSpacing: -0.5)),
       ),
-      body: Column(
-        children: <Widget>[_titleSection, _buttonSection, _textSection],
+      body: ListView(
+        children: <Widget>[
+          Image.asset(
+            "assets/lake.jpg",
+            fit: BoxFit.cover,
+          ),
+          _titleSection,
+          _buttonSection,
+          _textSection,
+        ],
       ),
     );
   }
