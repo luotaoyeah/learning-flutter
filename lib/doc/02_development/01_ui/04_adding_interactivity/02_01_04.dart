@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'favorite_widget.dart';
+
 /// https://flutter.dev/docs/development/ui/interactive
 class X020104 extends StatelessWidget {
   @override
@@ -30,14 +32,7 @@ class X020104 extends StatelessWidget {
               ],
             ),
           ),
-          Icon(
-            Icons.star,
-            color: Colors.red[500],
-          ),
-          Container(
-            child: Text("41"),
-            padding: const EdgeInsets.only(left: 3),
-          )
+          FavoriteWidget()
         ],
       ),
     );
