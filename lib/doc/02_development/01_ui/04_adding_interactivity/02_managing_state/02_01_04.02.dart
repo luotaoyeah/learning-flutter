@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'parent-widget.dart';
 import 'tap_box_a.dart';
 
 /// https://flutter.dev/docs/development/ui/interactive#managing-state
@@ -14,6 +15,8 @@ class X02010402 extends StatelessWidget {
         children: <Widget>[
           Divider(),
           TapBoxA(),
+          Divider(),
+          ParentWidget(),
           Divider(),
         ],
       ),
