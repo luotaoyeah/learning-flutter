@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 
-class TapBoxB extends StatelessWidget {
-  final bool active;
-  final ValueChanged<bool> onChanged;
+class TapBoxA extends StatefulWidget {
+  @override
+  State<TapBoxA> createState() => _TapBoxAState();
+}
 
-  TapBoxB({Key key, this.active, @required this.onChanged}) : super(key: key);
+class _TapBoxAState extends State<TapBoxA> {
+  bool _active = false;
 
   void _handleTap() {
-    onChanged(!active);
+    setState(() {
+      _active = !_active;
+    });
   }
 
   @override
@@ -17,12 +21,13 @@ class TapBoxB extends StatelessWidget {
         child: Container(
           child: Center(
             child: Text(
-              active ? "ACTIVE" : "INACTIVE",
+              _active ? "ACTIVE" : "INACTIVE",
               style: TextStyle(color: Colors.white, fontSize: 32.0),
             ),
           ),
           decoration: BoxDecoration(
-            color: active ? Colors.lightGreen[700] : Colors.grey[600],
+            color: _active ? Colors.lightGreen[700] : Colors.grey[600],
+            borderRadius: BorderRadius.all(Radius.circular(5)),
           ),
           width: 200,
           height: 200,
