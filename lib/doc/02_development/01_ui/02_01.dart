@@ -3,12 +3,14 @@ import 'package:learning_flutter/common/app_menu.dart';
 
 import '01_widgets_intro/02_01_01.dart';
 import '02_layout/02_01_02.dart';
+import '04_adding_interactivity/02_01_04.dart';
 
 /// https://flutter.dev/docs/development/ui/widgets-intro
 class X0201 extends StatelessWidget {
   final List<AppMenu> _menus = [
     AppMenu(title: "Introduction To Widgets", widget: X020101()),
     AppMenu(title: "Building Layouts", widget: X020102()),
+    AppMenu(title: "Adding Interactivity", widget: X020104()),
   ];
 
   @override
