@@ -1,25 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
 
-import '01_widgets_intro/02_01_01.dart';
-import '02_layout/02_01_02.dart';
-import '04_adding_interactivity/02_01_04.dart';
-import '05_assets_and_images/02_01_05.dart';
+import '01_loading_text_assets/02_01_05.01.dart';
 
-/// https://flutter.dev/docs/development/ui/widgets-intro
-class X0201 extends StatelessWidget {
+/// https://flutter.dev/docs/development/ui/assets-and-images
+class X020105 extends StatelessWidget {
   final List<AppMenu> _menus = [
-    AppMenu(title: "Introduction To Widgets", widget: X020101()),
-    AppMenu(title: "Building Layouts", widget: X020102()),
-    AppMenu(title: "Adding Interactivity", widget: X020104()),
-    AppMenu(title: "Assets And Images", widget: X020105()),
+    AppMenu(title: "Loading Text Assets", widget: X02010501()),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("User Interface", style: TextStyle(letterSpacing: -0.5)),
+        title: Text("Assets And Images", style: TextStyle(letterSpacing: -0.5)),
       ),
       body: ListView(
         children: ListTile.divideTiles(
