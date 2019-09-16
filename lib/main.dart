@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'common/app_menu.dart';
 import 'doc/01_get_started/01.dart';
 import 'doc/02_development/02.dart';
+import 'doc/03_cookbook/03.dart';
 
 void main() => runApp(App());
 
@@ -27,7 +28,8 @@ class DocMenu extends StatefulWidget {
 class DocMenuState extends State<DocMenu> {
   final List<AppMenu> _menus = [
     AppMenu(title: "Get Started", widget: X01()),
-    AppMenu(title: "Development", widget: X02())
+    AppMenu(title: "Cookbook", widget: X03()),
+    AppMenu(title: "Development", widget: X02()),
   ];
 
   @override
