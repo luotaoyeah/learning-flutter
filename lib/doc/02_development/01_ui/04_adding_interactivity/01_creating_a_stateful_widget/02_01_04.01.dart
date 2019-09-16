@@ -68,7 +68,7 @@ class X02010401 extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           Image.asset(
-            "assets/lake.jpg",
+            "assets/images/lake.jpg",
             fit: BoxFit.cover,
           ),
           _titleSection,

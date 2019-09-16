@@ -13,18 +13,18 @@ class X020102010201 extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Image.asset("assets/avatar.jpg"),
-              Image.asset("assets/avatar.jpg"),
-              Image.asset("assets/avatar.jpg"),
+              Image.asset("assets/images/avatar.jpg"),
+              Image.asset("assets/images/avatar.jpg"),
+              Image.asset("assets/images/avatar.jpg"),
             ],
           ),
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                Image.asset("assets/avatar.jpg"),
-                Image.asset("assets/avatar.jpg"),
-                Image.asset("assets/avatar.jpg"),
+                Image.asset("assets/images/avatar.jpg"),
+                Image.asset("assets/images/avatar.jpg"),
+                Image.asset("assets/images/avatar.jpg"),
               ],
             ),
           ),

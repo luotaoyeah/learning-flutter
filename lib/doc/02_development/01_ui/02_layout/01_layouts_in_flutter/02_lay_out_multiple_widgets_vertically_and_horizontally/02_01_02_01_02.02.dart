@@ -15,21 +15,21 @@ class X020102010202 extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 flex: 2,
-                child: Image.asset("assets/avatar.jpg"),
+                child: Image.asset("assets/images/avatar.jpg"),
               ),
               Expanded(
-                child: Image.asset("assets/avatar.jpg"),
-              ),
-              Expanded(
-                flex: 2,
-                child: Image.asset("assets/avatar.jpg"),
-              ),
-              Expanded(
-                child: Image.asset("assets/avatar.jpg"),
+                child: Image.asset("assets/images/avatar.jpg"),
               ),
               Expanded(
                 flex: 2,
-                child: Image.asset("assets/avatar.jpg"),
+                child: Image.asset("assets/images/avatar.jpg"),
+              ),
+              Expanded(
+                child: Image.asset("assets/images/avatar.jpg"),
+              ),
+              Expanded(
+                flex: 2,
+                child: Image.asset("assets/images/avatar.jpg"),
               ),
             ],
           ),

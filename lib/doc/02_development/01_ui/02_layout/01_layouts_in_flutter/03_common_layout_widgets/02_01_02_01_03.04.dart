@@ -17,7 +17,7 @@ class X020102010304 extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           CircleAvatar(
-            backgroundImage: AssetImage("assets/pic0.jpg"),
+            backgroundImage: AssetImage("assets/images/pic0.jpg"),
             radius: 100,
           ),
           Container(

@@ -37,7 +37,7 @@ class X020102010301 extends StatelessWidget {
           borderRadius: const BorderRadius.all(Radius.circular(8)),
         ),
         margin: const EdgeInsets.all(4),
-        child: Image.asset("assets/pic$index.jpg"),
+        child: Image.asset("assets/images/pic$index.jpg"),
       ),
     );
   }

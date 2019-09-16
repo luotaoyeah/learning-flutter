@@ -26,7 +26,7 @@ class X020102010302 extends StatelessWidget {
     return List.generate(
       count,
       (index) => Container(
-        child: Image.asset("assets/pic$index.jpg"),
+        child: Image.asset("assets/images/pic$index.jpg"),
       ),
     );
   }
