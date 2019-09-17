@@ -12,15 +12,20 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'LEARNING-FLUTTER',
-        theme: ThemeData(
-          fontFamily: "simfang",
-        ),
-        initialRoute: "/",
-        routes: {
-          "/": (context) => Home(),
-          "/03/08/03/01": (context) => X03080301(),
-        });
+      title: 'LEARNING-FLUTTER',
+      theme: ThemeData(
+        fontFamily: "simfang",
+      ),
+      // ignore: missing_return
+      onGenerateRoute: (RouteSettings routeSettings) {
+        switch (routeSettings.name) {
+          case "/":
+            return PageRouteBuilder(pageBuilder: (_, __, ___) => Home());
+          case "/03/08/03/01":
+            return PageRouteBuilder(pageBuilder: (_, __, ___) => X03080301());
+        }
+      },
+    );
   }
 }
 
