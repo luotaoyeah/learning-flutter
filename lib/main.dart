@@ -5,6 +5,8 @@ import 'doc/01_get_started/01.dart';
 import 'doc/02_development/02.dart';
 import 'doc/03_cookbook/03.dart';
 import 'doc/03_cookbook/08_navigation/03_named_routes/03_08_03.dart';
+import 'doc/03_cookbook/08_navigation/04_navigate_with_arguments/03_08_04.01.dart';
+import 'doc/03_cookbook/08_navigation/04_navigate_with_arguments/03_08_04.02.dart';
 
 void main() => runApp(App());
 
@@ -23,6 +25,14 @@ class App extends StatelessWidget {
             return PageRouteBuilder(pageBuilder: (_, __, ___) => Home());
           case "/03/08/03/01":
             return PageRouteBuilder(pageBuilder: (_, __, ___) => X03080301());
+          case "/03/08/04/01":
+            return PageRouteBuilder(pageBuilder: (_, __, ___) => X03080401(), settings: routeSettings);
+          case "/03/08/04/02":
+            return PageRouteBuilder(
+              pageBuilder: (_, __, ___) => X03080402(
+                todo: routeSettings.arguments,
+              ),
+            );
         }
       },
     );
