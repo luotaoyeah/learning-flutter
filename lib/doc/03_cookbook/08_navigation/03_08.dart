@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
 
 import '02_navigation_basics/03_08_02.dart';
+import '03_named_routes/03_08_03.dart';
 
 /// https://flutter.dev/docs/cookbook/navigation
 class X0308 extends StatelessWidget {
   final List<AppMenu> _menus = [
     AppMenu(title: "Navigate To A New Screen And Back", widget: X030802()),
+    AppMenu(title: "Navigate With Named Routes", widget: X030803()),
   ];
 
   @override

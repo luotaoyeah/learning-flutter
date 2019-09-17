@@ -4,6 +4,7 @@ import 'common/app_menu.dart';
 import 'doc/01_get_started/01.dart';
 import 'doc/02_development/02.dart';
 import 'doc/03_cookbook/03.dart';
+import 'doc/03_cookbook/08_navigation/03_named_routes/03_08_03.dart';
 
 void main() => runApp(App());
 
@@ -11,21 +12,24 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'LEARNING-FLUTTER',
-      theme: ThemeData(
-        fontFamily: "simfang",
-      ),
-      home: DocMenu(),
-    );
+        title: 'LEARNING-FLUTTER',
+        theme: ThemeData(
+          fontFamily: "simfang",
+        ),
+        initialRoute: "/",
+        routes: {
+          "/": (context) => Home(),
+          "/03/08/03/01": (context) => X03080301(),
+        });
   }
 }
 
-class DocMenu extends StatefulWidget {
+class Home extends StatefulWidget {
   @override
-  DocMenuState createState() => DocMenuState();
+  HomeState createState() => HomeState();
 }
 
-class DocMenuState extends State<DocMenu> {
+class HomeState extends State<Home> {
   final List<AppMenu> _menus = [
     AppMenu(title: "Get Started", widget: X01()),
     AppMenu(title: "Cookbook", widget: X03()),
