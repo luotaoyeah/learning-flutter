@@ -16,8 +16,8 @@ class Result<T> {
   Map<String, dynamic> toJson() => _$ResultToJson(this);
 }
 
-T _dataFromJson<T>(Map<String, dynamic> input) {
-  return input as T;
+dynamic _dataFromJson(Map<String, dynamic> input) {
+  return input;
 }
 
 Object _dataToJson<T>(T t) {

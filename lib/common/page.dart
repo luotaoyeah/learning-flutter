@@ -15,8 +15,8 @@ class Page<T> {
   Map<String, dynamic> toJson() => _$PageToJson(this);
 }
 
-T _dataFromJson<T>(Map<String, dynamic> input) {
-  return input as T;
+dynamic _dataFromJson(List<dynamic> input) {
+  return input;
 }
 
 Object _dataToJson<T>(T t) {

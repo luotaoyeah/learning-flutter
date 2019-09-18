@@ -9,7 +9,7 @@ part of 'page.dart';
 Page<T> _$PageFromJson<T>(Map<String, dynamic> json) {
   return Page<T>(
     totalCount: json['totalCount'] as int,
-    data: _dataFromJson(json['data'] as Map<String, dynamic>),
+    data: _dataFromJson(json['data'] as List),
   );
 }
 
