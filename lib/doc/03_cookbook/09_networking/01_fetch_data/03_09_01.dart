@@ -13,6 +13,14 @@ class X030901 extends StatefulWidget {
 }
 
 class _X030901State extends State<X030901> {
+  Future<Page<Article>> pageFuture;
+
+  @override
+  void initState() {
+    super.initState();
+    this.pageFuture = this._fetchArticles();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,9 +31,8 @@ class _X030901State extends State<X030901> {
         children: <Widget>[
           RaisedButton(
             child: Text('加载'),
-            onPressed: () async {
-              Result<Page<Article>> result = await _fetchArticles();
-              print(result);
+            onPressed: () {
+              this.pageFuture = this._fetchArticles();
             },
           )
         ],
@@ -33,21 +40,25 @@ class _X030901State extends State<X030901> {
     );
   }
 
-  Future<Result<Page<Article>>> _fetchArticles() async {
+  Future<Page<Article>> _fetchArticles() async {
     var response = await http.post("http://192.168.1.14:17202/api/article", body: {});
 
-    Result<dynamic> _result = Result<dynamic>.fromJson(json.decode(response.body));
-    Page<dynamic> _page = Page<dynamic>.fromJson(_result.data);
+    if (response.statusCode == 200 || response.statusCode == 201) {
+      Result<dynamic> _result = Result<dynamic>.fromJson(json.decode(response.body));
 
-    Page<Article> page = Page<Article>();
-    page.totalCount = _page.totalCount;
-    page.data = _page.data.map((i) => Article.fromJson(i)).toList(growable: false);
+      if (!_result.status) {
+        throw Exception(_result.message);
+      } else {
+        Page<dynamic> _page = Page<dynamic>.fromJson(_result.data);
 
-    Result<Page<Article>> result = Result<Page<Article>>();
-    result.message = _result.message;
-    result.status = _result.status;
-    result.data = page;
+        Page<Article> page = Page<Article>();
+        page.totalCount = _page.totalCount;
+        page.data = _page.data.map((i) => Article.fromJson(i)).toList(growable: false);
 
-    return result;
+        return page;
+      }
+    } else {
+      throw Exception("fail to fetch articles");
+    }
   }
 }
