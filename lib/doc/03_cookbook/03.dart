@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
 
 import '08_navigation/03_08.dart';
+import '09_networking/03_09.dart';
 
 /// https://flutter.dev/docs/cookbook
 class X03 extends StatelessWidget {
   final List<AppMenu> _menus = [
     AppMenu(title: "Navigation", widget: X0308()),
+    AppMenu(title: "Networking", widget: X0309()),
   ];
 
   @override
