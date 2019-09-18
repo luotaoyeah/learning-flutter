@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:learning_flutter/common/article.dart';
@@ -32,11 +33,50 @@ class _X030901State extends State<X030901> {
           RaisedButton(
             child: Text('加载'),
             onPressed: () {
-              this.pageFuture = this._fetchArticles();
+              setState(() {
+                this.pageFuture = this._fetchArticles();
+              });
             },
+          ),
+          Expanded(
+            child: Center(
+              child: FutureBuilder<Page<Article>>(
+                future: pageFuture,
+                builder: (BuildContext context, AsyncSnapshot<Page<Article>> snapshot) {
+                  if (snapshot.hasData) {
+                    return _buildArticleList(snapshot.data, context);
+                  } else if (snapshot.hasError) {
+                    return Text(snapshot.error);
+                  }
+
+                  return CircularProgressIndicator(
+                    strokeWidth: 1,
+                  );
+                },
+              ),
+            ),
           )
         ],
       ),
+    );
+  }
+
+  Widget _buildArticleList(Page<Article> page, BuildContext context) {
+    return ListView(
+      children: ListTile.divideTiles(
+        tiles: page.data.map(
+          (article) => Container(
+            child: ListTile(
+              leading: Image.network(
+                "http://192.168.1.14:17202/api/picture/file/thumb?fileName=${article.cover.fileName}",
+                fit: BoxFit.fill,
+              ),
+              title: Text(article.title),
+            ),
+          ),
+        ),
+        context: context,
+      ).toList(),
     );
   }
 
