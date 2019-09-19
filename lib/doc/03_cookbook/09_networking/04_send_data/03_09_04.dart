@@ -11,12 +11,15 @@ class X030904 extends StatefulWidget {
 
 class _X030904State extends State<X030904> {
   Future<Page<Article>> pageFuture;
-  final TextEditingController _controller = TextEditingController();
+  bool _isArticlesLoading = false;
+  int _pageIndex = 1;
 
   @override
   void initState() {
     super.initState();
-    this.pageFuture = ArticleService.fetchArticles();
+    this.pageFuture = ArticleService.fetchArticles().whenComplete(() {
+      _isArticlesLoading = false;
+    });
   }
 
   @override
@@ -27,30 +30,15 @@ class _X030904State extends State<X030904> {
       ),
       body: Column(
         children: [
-          Row(
-            children: [
-              Expanded(
-                child: TextField(
-                  controller: _controller,
-                  decoration: InputDecoration(hintText: "页码"),
-                ),
-              ),
-              RaisedButton(
-                child: Text("加载"),
-                onPressed: () {
-                  setState(() {
-                    this.pageFuture = ArticleService.fetchArticles(pageIndex: int.parse(_controller.text));
-                  });
-                },
-              )
-            ],
-          ),
+          _buildPagesDropdownButton(),
           Expanded(
             child: Center(
               child: FutureBuilder<Page<Article>>(
                 future: pageFuture,
                 builder: (BuildContext context, AsyncSnapshot<Page<Article>> snapshot) {
-                  if (snapshot.hasData) {
+                  if (_isArticlesLoading) {
+                    return CircularProgressIndicator(strokeWidth: 1);
+                  } else if (snapshot.hasData) {
                     return _buildArticleList(snapshot.data, context);
                   } else if (snapshot.hasError) {
                     return Text(snapshot.error);
@@ -65,6 +53,41 @@ class _X030904State extends State<X030904> {
           )
         ],
       ),
+    );
+  }
+
+  Widget _buildPagesDropdownButton() {
+    return Container(
+      child: DropdownButton<int>(
+        value: _pageIndex,
+        isExpanded: true,
+        icon: Icon(Icons.arrow_drop_down),
+        iconSize: 24,
+        elevation: 1,
+        underline: Container(
+          height: 1,
+          color: Colors.black26,
+        ),
+        onChanged: (int newValue) {
+          setState(() {
+            _isArticlesLoading = true;
+            _pageIndex = newValue;
+            pageFuture = ArticleService.fetchArticles(pageIndex: _pageIndex).whenComplete(() {
+              _isArticlesLoading = false;
+            });
+          });
+        },
+        items: <int>[1, 2, 3, 4, 5, 6, 7, 8, 9].map<DropdownMenuItem<int>>((int value) {
+          return DropdownMenuItem<int>(
+            value: value,
+            child: Text(
+              value.toString(),
+              style: TextStyle(fontFamily: 'simfang'),
+            ),
+          );
+        }).toList(),
+      ),
+      margin: const EdgeInsets.symmetric(horizontal: 10),
     );
   }
 
