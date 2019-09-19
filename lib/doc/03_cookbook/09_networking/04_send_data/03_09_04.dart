@@ -1,12 +1,7 @@
-import 'dart:convert';
-
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'package:learning_flutter/common/article.dart';
 import 'package:learning_flutter/common/page.dart';
-import 'package:learning_flutter/common/result.dart';
+import 'package:learning_flutter/service/article.service.dart';
 
 /// https://flutter.dev/docs/cookbook/networking/send-data
 class X030904 extends StatefulWidget {
@@ -21,7 +16,7 @@ class _X030904State extends State<X030904> {
   @override
   void initState() {
     super.initState();
-    this.pageFuture = this._fetchArticles(1);
+    this.pageFuture = ArticleService.fetchArticles();
   }
 
   @override
@@ -44,7 +39,7 @@ class _X030904State extends State<X030904> {
                 child: Text("加载"),
                 onPressed: () {
                   setState(() {
-                    this.pageFuture = this._fetchArticles(int.parse(_controller.text));
+                    this.pageFuture = ArticleService.fetchArticles(pageIndex: int.parse(_controller.text));
                   });
                 },
               )
@@ -94,31 +89,5 @@ class _X030904State extends State<X030904> {
         context: context,
       ).toList(),
     );
-  }
-
-  Future<Page<Article>> _fetchArticles(int pageIndex) async {
-    var response = await http.post("http://192.168.1.14:17202/api/article", body: {"pageIndex": pageIndex.toString()});
-
-    if (response.statusCode == 200 || response.statusCode == 201) {
-      return compute(_parsePage, response.body);
-    } else {
-      throw Exception("fail to fetch articles");
-    }
-  }
-}
-
-Page<Article> _parsePage(String body) {
-  Result<dynamic> _result = Result<dynamic>.fromJson(json.decode(body));
-
-  if (!_result.status) {
-    throw Exception(_result.message);
-  } else {
-    Page<dynamic> _page = Page<dynamic>.fromJson(_result.data);
-
-    Page<Article> page = Page<Article>();
-    page.totalCount = _page.totalCount;
-    page.data = _page.data.map((i) => Article.fromJson(i)).toList(growable: false);
-
-    return page;
   }
 }
