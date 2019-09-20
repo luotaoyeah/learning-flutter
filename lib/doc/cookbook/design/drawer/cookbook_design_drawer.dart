@@ -37,7 +37,6 @@ class CookbookDesignDrawer extends StatelessWidget {
           ],
         ),
       ),
-      body: Text("TODO"),
     );
   }
 }
