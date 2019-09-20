@@ -79,3 +79,6 @@ flutter:
     - family: simfang
       fonts:
         - asset: fonts/simfang.ttf
+    - family: monaco
+      fonts:
+        - asset: fonts/monaco.ttf
