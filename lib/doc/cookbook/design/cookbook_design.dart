@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
 
-import '08_navigation/03_08.dart';
-import '09_networking/03_09.dart';
+import 'drawer/cookbook_design_drawer.dart';
 
-/// https://flutter.dev/docs/cookbook
-class X03 extends StatelessWidget {
+/// https://flutter.dev/docs/cookbook/design
+class CookbookDesign extends StatelessWidget {
   final List<AppMenu> _menus = [
-    AppMenu(title: "Navigation", widget: X0308()),
-    AppMenu(title: "Networking", widget: X0309()),
+    AppMenu(title: "Add A Drawer To A Screen", widget: CookbookDesignDrawer()),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Cookbook", style: TextStyle(letterSpacing: -0.5)),
+        title: Text("Design", style: TextStyle(letterSpacing: -0.5)),
       ),
       body: ListView(
         children: ListTile.divideTiles(

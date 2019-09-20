@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'common/app_menu.dart';
 import 'doc/01_get_started/01.dart';
 import 'doc/02_development/02.dart';
-import 'doc/03_cookbook/03.dart';
-import 'doc/03_cookbook/08_navigation/03_named_routes/03_08_03.dart';
-import 'doc/03_cookbook/08_navigation/04_navigate_with_arguments/03_08_04.01.dart';
-import 'doc/03_cookbook/08_navigation/04_navigate_with_arguments/03_08_04.02.dart';
+import 'doc/cookbook/08_navigation/03_named_routes/03_08_03.dart';
+import 'doc/cookbook/08_navigation/04_navigate_with_arguments/03_08_04.01.dart';
+import 'doc/cookbook/08_navigation/04_navigate_with_arguments/03_08_04.02.dart';
+import 'doc/cookbook/cookbook.dart';
 
 void main() => runApp(App());
 
@@ -47,7 +47,7 @@ class Home extends StatefulWidget {
 class HomeState extends State<Home> {
   final List<AppMenu> _menus = [
     AppMenu(title: "Get Started", widget: X01()),
-    AppMenu(title: "Cookbook", widget: X03()),
+    AppMenu(title: "Cookbook", widget: Cookbook()),
     AppMenu(title: "Development", widget: X02()),
   ];
 
