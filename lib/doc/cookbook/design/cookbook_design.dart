@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
 import 'package:learning_flutter/doc/cookbook/design/snackbars/cookbook_design_snackbars.dart';
+import 'package:learning_flutter/doc/cookbook/design/tabs/cookbook_design_tabs.dart';
 import 'package:learning_flutter/doc/cookbook/design/themes/cookbook_design_themes.dart';
 
 import 'drawer/cookbook_design_drawer.dart';
@@ -15,6 +16,7 @@ class CookbookDesign extends StatelessWidget {
     AppMenu(title: "Update The UI Based On Orientation", widget: CookbookDesignOrientation()),
     AppMenu(title: "Use A Custom Font", widget: CookbookDesignFonts()),
     AppMenu(title: "Use Themes To Share Colors And Font Styles", widget: CookbookDesignThemes()),
+    AppMenu(title: "Work With Tabs", widget: CookbookDesignTabs()),
   ];
 
   @override
