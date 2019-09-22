@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
+import 'package:learning_flutter/doc/cookbook/images/fading_in_images/cookbook__images__fading_in_images.dart';
 import 'package:learning_flutter/doc/cookbook/images/network_image/cookbook__images__network_image.dart';
 
 /// https://flutter.dev/docs/cookbook/images
 class CookbookImages extends StatelessWidget {
   final List<AppMenu> _menus = [
     AppMenu(title: "Display Images From The Internet", widget: CookbookImagesNetworkImage()),
+    AppMenu(title: "Fade In Images With A Placeholder", widget: CookbookImagesFadingInImages()),
   ];
 
   @override
