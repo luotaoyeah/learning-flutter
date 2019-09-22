@@ -8,12 +8,12 @@ class CookbookDesignSnackbars extends StatelessWidget {
       appBar: AppBar(
         title: Text("Display A Snackbar", style: TextStyle(letterSpacing: -0.5)),
       ),
-      body: X01(),
+      body: _X01(),
     );
   }
 }
 
-class X01 extends StatelessWidget {
+class _X01 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(

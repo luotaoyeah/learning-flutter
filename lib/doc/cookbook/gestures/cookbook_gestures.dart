@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
+import 'package:learning_flutter/doc/cookbook/gestures/handling_taps/cookbook__gestures__handling_taps.dart';
 import 'package:learning_flutter/doc/cookbook/gestures/ripples/cookbook_gestures_ripples.dart';
 
 /// https://flutter.dev/docs/cookbook/gestures
 class CookbookGestures extends StatelessWidget {
   final List<AppMenu> _menus = [
     AppMenu(title: "Add Material Touch Ripples", widget: CookbookGesturesRipples()),
+    AppMenu(title: "Handle Taps", widget: CookbookGesturesHandlingTaps()),
   ];
 
   @override
