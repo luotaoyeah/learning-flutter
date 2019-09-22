@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
-
-import '01_hero_animations/03_08_01.dart';
-import '02_navigation_basics/03_08_02.dart';
-import '03_named_routes/03_08_03.dart';
-import '04_navigate_with_arguments/03_08_04.dart';
-import '05_returning_data/03_08_05.dart';
-import '06_passing_data/03_08_06.dart';
+import 'package:learning_flutter/doc/cookbook/navigation/hero_animations/03_08_01.dart';
+import 'package:learning_flutter/doc/cookbook/navigation/named_routes/03_08_03.dart';
+import 'package:learning_flutter/doc/cookbook/navigation/navigate_with_arguments/03_08_04.dart';
+import 'package:learning_flutter/doc/cookbook/navigation/navigation_basics/03_08_02.dart';
+import 'package:learning_flutter/doc/cookbook/navigation/passing_data/03_08_06.dart';
+import 'package:learning_flutter/doc/cookbook/navigation/returning_data/03_08_05.dart';
 
 /// https://flutter.dev/docs/cookbook/navigation
 class X0308 extends StatelessWidget {

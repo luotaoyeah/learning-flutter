@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
-
-import '01_loading_text_assets/02_01_05.01.dart';
-import '02_loading_images/02_01_05.02.dart';
+import 'package:learning_flutter/doc/development/ui/assets_and_images/loading_images/02_01_05.02.dart';
+import 'package:learning_flutter/doc/development/ui/assets_and_images/loading_text_assets/02_01_05.01.dart';
 
 /// https://flutter.dev/docs/development/ui/assets-and-images
 class X020105 extends StatelessWidget {

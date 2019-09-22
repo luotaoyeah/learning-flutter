@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
-
-import '01_fetch_data/03_09_01.dart';
-import '03_background_parsing/03_09_03.dart';
-import '04_send_data/03_09_04.dart';
+import 'package:learning_flutter/doc/cookbook/networking/background_parsing/03_09_03.dart';
+import 'package:learning_flutter/doc/cookbook/networking/fetch_data/03_09_01.dart';
+import 'package:learning_flutter/doc/cookbook/networking/send_data/03_09_04.dart';
 
 /// https://flutter.dev/docs/cookbook#networking
 class X0309 extends StatelessWidget {

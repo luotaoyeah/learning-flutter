@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
+import 'package:learning_flutter/doc/development/ui/adding_interactivity/creating_a_stateful_widget/02_01_04.01.dart';
+import 'package:learning_flutter/doc/development/ui/adding_interactivity/managing_state/02_01_04.02.dart';
 
-import '01_ui/02_01.dart';
-import '02_data_and_backend/02_02.dart';
-
-/// https://flutter.dev/docs/development
-class X02 extends StatelessWidget {
+/// https://flutter.dev/docs/development/ui/interactive
+class X020104 extends StatelessWidget {
   final List<AppMenu> _menus = [
-    AppMenu(title: "User Interface", widget: X0201()),
-    AppMenu(title: "Data & Backend", widget: X0202()),
+    AppMenu(title: "Creating a stateful widget", widget: X02010401()),
+    AppMenu(title: "Managing State", widget: X02010402()),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Development", style: TextStyle(letterSpacing: -0.5)),
+        title: Text("Adding Interactivity", style: TextStyle(letterSpacing: -0.5)),
       ),
       body: ListView(
         children: ListTile.divideTiles(

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
 
-import '08_navigation/03_08.dart';
-import '09_networking/03_09.dart';
 import 'design/cookbook_design.dart';
+import 'navigation/03_08.dart';
+import 'networking/03_09.dart';
 
 /// https://flutter.dev/docs/cookbook
 class Cookbook extends StatelessWidget {

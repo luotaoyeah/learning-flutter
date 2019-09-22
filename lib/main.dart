@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-
-import 'common/app_menu.dart';
-import 'doc/01_get_started/01.dart';
-import 'doc/02_development/02.dart';
-import 'doc/cookbook/08_navigation/03_named_routes/03_08_03.dart';
-import 'doc/cookbook/08_navigation/04_navigate_with_arguments/03_08_04.01.dart';
-import 'doc/cookbook/08_navigation/04_navigate_with_arguments/03_08_04.02.dart';
-import 'doc/cookbook/cookbook.dart';
+import 'package:learning_flutter/common/app_menu.dart';
+import 'package:learning_flutter/doc/cookbook/cookbook.dart';
+import 'package:learning_flutter/doc/cookbook/navigation/named_routes/03_08_03.dart';
+import 'package:learning_flutter/doc/cookbook/navigation/navigate_with_arguments/03_08_04.01.dart';
+import 'package:learning_flutter/doc/cookbook/navigation/navigate_with_arguments/03_08_04.02.dart';
+import 'package:learning_flutter/doc/development/02.dart';
+import 'package:learning_flutter/doc/get_started/01.dart';
 
 void main() => runApp(App());
 

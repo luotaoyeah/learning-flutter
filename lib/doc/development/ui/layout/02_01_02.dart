@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
-import 'package:learning_flutter/doc/02_development/01_ui/02_layout/01_layouts_in_flutter/02_01_02_01.dart';
+import 'package:learning_flutter/doc/development/ui/layout/01_layouts_in_flutter/02_01_02_01.dart';
 
 import '02_tutorial/02_01_02_02.dart';
 
