@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
+import 'package:learning_flutter/doc/cookbook/gestures/dismissible/cookbook__gestures__dismissible.dart';
 import 'package:learning_flutter/doc/cookbook/gestures/handling_taps/cookbook__gestures__handling_taps.dart';
 import 'package:learning_flutter/doc/cookbook/gestures/ripples/cookbook_gestures_ripples.dart';
 
@@ -8,6 +9,7 @@ class CookbookGestures extends StatelessWidget {
   final List<AppMenu> _menus = [
     AppMenu(title: "Add Material Touch Ripples", widget: CookbookGesturesRipples()),
     AppMenu(title: "Handle Taps", widget: CookbookGesturesHandlingTaps()),
+    AppMenu(title: "Implement Swipe To Dismiss", widget: CookbookGesturesDismissible()),
   ];
 
   @override
