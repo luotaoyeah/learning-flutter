@@ -1,24 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
-import 'package:learning_flutter/doc/cookbook/design/cookbook_design.dart';
-import 'package:learning_flutter/doc/cookbook/gestures/cookbook_gestures.dart';
-import 'package:learning_flutter/doc/cookbook/navigation/03_08.dart';
-import 'package:learning_flutter/doc/cookbook/networking/03_09.dart';
+import 'package:learning_flutter/doc/cookbook/gestures/ripples/cookbook_gestures_ripples.dart';
 
-/// https://flutter.dev/docs/cookbook
-class Cookbook extends StatelessWidget {
+/// https://flutter.dev/docs/cookbook/gestures
+class CookbookGestures extends StatelessWidget {
   final List<AppMenu> _menus = [
-    AppMenu(title: "Design", widget: CookbookDesign()),
-    AppMenu(title: "Gestures", widget: CookbookGestures()),
-    AppMenu(title: "Navigation", widget: X0308()),
-    AppMenu(title: "Networking", widget: X0309()),
+    AppMenu(title: "Add Material Touch Ripples", widget: CookbookGesturesRipples()),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Cookbook", style: TextStyle(letterSpacing: -0.5)),
+        title: Text("Gestures", style: TextStyle(letterSpacing: -0.5)),
       ),
       body: ListView(
         children: ListTile.divideTiles(
