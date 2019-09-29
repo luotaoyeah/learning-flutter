@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
 import 'package:learning_flutter/doc/cookbook/lists/grid_lists/cookbook__lists__grid_lists.dart';
+import 'package:learning_flutter/doc/cookbook/lists/horizontal_list/cookbook__lists__horizontal_list.dart';
 
 /// https://flutter.dev/docs/cookbook/lists
 class CookbookLists extends StatelessWidget {
   final List<AppMenu> _menus = [
     AppMenu(title: "Create A Grid List", widget: CookbookListsGridLists()),
+    AppMenu(title: "Create A Horizontal List", widget: CookbookListsHorizontalList()),
   ];
 
   @override
