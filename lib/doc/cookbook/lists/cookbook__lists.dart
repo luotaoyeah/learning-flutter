@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
+import 'package:learning_flutter/doc/cookbook/lists/floating_app_bar/cookbook__lists__floating_app_bar.dart';
 import 'package:learning_flutter/doc/cookbook/lists/grid_lists/cookbook__lists__grid_lists.dart';
 import 'package:learning_flutter/doc/cookbook/lists/horizontal_list/cookbook__lists__horizontal_list.dart';
 import 'package:learning_flutter/doc/cookbook/lists/mixed_list/cookbook__lists__mixed_list.dart';
@@ -10,6 +11,7 @@ class CookbookLists extends StatelessWidget {
     AppMenu(title: "Create A Grid List", widget: CookbookListsGridLists()),
     AppMenu(title: "Create A Horizontal List", widget: CookbookListsHorizontalList()),
     AppMenu(title: "Create Lists With Different Types Of Items", widget: CookbookListsMixedList()),
+    AppMenu(title: "Place A Floating App Bar Above A List", widget: CookbookListsFloatingAppBar()),
   ];
 
   @override
