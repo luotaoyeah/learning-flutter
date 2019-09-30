@@ -17,7 +17,7 @@ class _CookbookNetworkingFetchDataState extends State<CookbookNetworkingFetchDat
   @override
   void initState() {
     super.initState();
-    this.pageFuture = ArticleService.fetchArticles(pageIndex: 1).whenComplete(() {
+    this.pageFuture = ArticleService.fetchArticles(pageIndex: 1, type: 3).whenComplete(() {
       setState(() {
         _isArticlesFetching = false;
       });
@@ -37,7 +37,7 @@ class _CookbookNetworkingFetchDataState extends State<CookbookNetworkingFetchDat
             onPressed: () {
               setState(() {
                 this._isArticlesFetching = true;
-                this.pageFuture = ArticleService.fetchArticles(pageIndex: 1).whenComplete(() {
+                this.pageFuture = ArticleService.fetchArticles(pageIndex: 0, type: 3).whenComplete(() {
                   this._isArticlesFetching = false;
                 });
               });

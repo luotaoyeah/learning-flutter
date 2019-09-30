@@ -15,11 +15,12 @@ class ArticleService {
   ///
   /// - [pageIndex] 当前页码
   ///
-  static Future<Page<Article>> fetchArticles({int pageIndex = 1, int pageSize = 10}) async {
+  static Future<Page<Article>> fetchArticles({int pageIndex = 1, int pageSize = 10, int type = 1}) async {
     try {
       var response = await http.post("$url/api/article", body: {
         "pageIndex": pageIndex.toString(),
         "pageSize": pageSize.toString(),
+        "type": type.toString(),
       });
 
       if (response.statusCode == 200 || response.statusCode == 201) {

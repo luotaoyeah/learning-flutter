@@ -7,6 +7,7 @@ import 'package:learning_flutter/doc/cookbook/lists/cookbook__lists.dart';
 import 'package:learning_flutter/doc/cookbook/navigation/03_08.dart';
 import 'package:learning_flutter/doc/cookbook/networking/cookbook__networking.dart';
 import 'package:learning_flutter/doc/cookbook/persistence/cookbook__persistence.dart';
+import 'package:learning_flutter/doc/cookbook/plugins/cookbook__plugins.dart';
 
 /// https://flutter.dev/docs/cookbook
 class Cookbook extends StatelessWidget {
@@ -18,6 +19,7 @@ class Cookbook extends StatelessWidget {
     AppMenu(title: "Navigation", widget: X0308()),
     AppMenu(title: "Networking", widget: CookbookNetworking()),
     AppMenu(title: "Persistence", widget: CookbookPersistence()),
+    AppMenu(title: "Plugins", widget: CookbookPlugins()),
   ];
 
   @override
