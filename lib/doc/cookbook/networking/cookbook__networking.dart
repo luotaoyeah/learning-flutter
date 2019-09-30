@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
 import 'package:learning_flutter/doc/cookbook/networking/background_parsing/03_09_03.dart';
-import 'package:learning_flutter/doc/cookbook/networking/fetch_data/03_09_01.dart';
+import 'package:learning_flutter/doc/cookbook/networking/fetch_data/cookbook__networking__fetch_data.dart';
 import 'package:learning_flutter/doc/cookbook/networking/send_data/03_09_04.dart';
 
 /// https://flutter.dev/docs/cookbook#networking
-class X0309 extends StatelessWidget {
+class CookbookNetworking extends StatelessWidget {
   final List<AppMenu> _menus = [
-    AppMenu(title: "Fetch Data From The Internet", widget: X030901()),
+    AppMenu(title: "Fetch Data From The Internet", widget: CookbookNetworkingFetchData()),
     AppMenu(title: "Parse JSON In The Background", widget: X030903()),
     AppMenu(title: "Send Data To The Internet", widget: X030904()),
   ];

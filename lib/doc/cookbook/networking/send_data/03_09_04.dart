@@ -11,14 +11,14 @@ class X030904 extends StatefulWidget {
 
 class _X030904State extends State<X030904> {
   Future<Page<Article>> pageFuture;
-  bool _isArticlesLoading = false;
+  bool _isArticlesFetching = false;
   int _pageIndex = 1;
 
   @override
   void initState() {
     super.initState();
     this.pageFuture = ArticleService.fetchArticles().whenComplete(() {
-      _isArticlesLoading = false;
+      _isArticlesFetching = false;
     });
   }
 
@@ -36,7 +36,7 @@ class _X030904State extends State<X030904> {
               child: FutureBuilder<Page<Article>>(
                 future: pageFuture,
                 builder: (BuildContext context, AsyncSnapshot<Page<Article>> snapshot) {
-                  if (_isArticlesLoading) {
+                  if (_isArticlesFetching) {
                     return CircularProgressIndicator(strokeWidth: 1);
                   } else if (snapshot.hasData) {
                     return _buildArticleList(snapshot.data, context);
@@ -44,9 +44,7 @@ class _X030904State extends State<X030904> {
                     return Text(snapshot.error);
                   }
 
-                  return CircularProgressIndicator(
-                    strokeWidth: 1,
-                  );
+                  return CircularProgressIndicator(strokeWidth: 1);
                 },
               ),
             ),
@@ -70,10 +68,10 @@ class _X030904State extends State<X030904> {
         ),
         onChanged: (int newValue) {
           setState(() {
-            _isArticlesLoading = true;
+            _isArticlesFetching = true;
             _pageIndex = newValue;
             pageFuture = ArticleService.fetchArticles(pageIndex: _pageIndex).whenComplete(() {
-              _isArticlesLoading = false;
+              _isArticlesFetching = false;
             });
           });
         },
@@ -99,7 +97,7 @@ class _X030904State extends State<X030904> {
             child: ListTile(
               leading: (article.cover.fileName != null && article.cover.fileName.isNotEmpty)
                   ? Image.network(
-                      "http://192.168.1.14:17202/api/picture/file/thumb?fileName=${article.cover.fileName}",
+                      "http://192.168.1.16:17202/api/picture/file/thumb?fileName=${article.cover.fileName}",
                       width: 100,
                       height: article.cover.height * 100 / article.cover.width,
                       fit: BoxFit.fill,

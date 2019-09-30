@@ -5,18 +5,23 @@ import 'package:learning_flutter/common/page.dart';
 import 'package:learning_flutter/service/article.service.dart';
 
 /// https://flutter.dev/docs/cookbook/networking/fetch-data
-class X030901 extends StatefulWidget {
+class CookbookNetworkingFetchData extends StatefulWidget {
   @override
-  _X030901State createState() => _X030901State();
+  _CookbookNetworkingFetchDataState createState() => _CookbookNetworkingFetchDataState();
 }
 
-class _X030901State extends State<X030901> {
+class _CookbookNetworkingFetchDataState extends State<CookbookNetworkingFetchData> {
   Future<Page<Article>> pageFuture;
+  bool _isArticlesFetching = false;
 
   @override
   void initState() {
     super.initState();
-    this.pageFuture = ArticleService.fetchArticles(pageIndex: 1);
+    this.pageFuture = ArticleService.fetchArticles(pageIndex: 1).whenComplete(() {
+      setState(() {
+        _isArticlesFetching = false;
+      });
+    });
   }
 
   @override
@@ -31,7 +36,10 @@ class _X030901State extends State<X030901> {
             child: Text('加载'),
             onPressed: () {
               setState(() {
-                this.pageFuture = ArticleService.fetchArticles(pageIndex: 1);
+                this._isArticlesFetching = true;
+                this.pageFuture = ArticleService.fetchArticles(pageIndex: 1).whenComplete(() {
+                  this._isArticlesFetching = false;
+                });
               });
             },
           ),
@@ -40,15 +48,15 @@ class _X030901State extends State<X030901> {
               child: FutureBuilder<Page<Article>>(
                 future: pageFuture,
                 builder: (BuildContext context, AsyncSnapshot<Page<Article>> snapshot) {
-                  if (snapshot.hasData) {
+                  if (_isArticlesFetching) {
+                    return CircularProgressIndicator(strokeWidth: 1);
+                  } else if (snapshot.hasData) {
                     return _buildArticleList(snapshot.data, context);
                   } else if (snapshot.hasError) {
                     return Text(snapshot.error);
                   }
 
-                  return CircularProgressIndicator(
-                    strokeWidth: 1,
-                  );
+                  return CircularProgressIndicator(strokeWidth: 1);
                 },
               ),
             ),
@@ -65,7 +73,7 @@ class _X030901State extends State<X030901> {
           (article) => Container(
             child: ListTile(
               leading: Image.network(
-                "http://192.168.1.14:17202/api/picture/file/thumb?fileName=${article.cover.fileName}",
+                "http://192.168.1.16:17202/api/picture/file/thumb?fileName=${article.cover.fileName}",
                 fit: BoxFit.fill,
               ),
               title: Text(article.title),

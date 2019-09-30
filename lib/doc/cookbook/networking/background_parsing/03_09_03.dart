@@ -51,7 +51,7 @@ class _X030903State extends State<X030903> {
           (article) => Container(
             child: ListTile(
               leading: Image.network(
-                "http://192.168.1.14:17202/api/picture/file/thumb?fileName=${article.cover.fileName}",
+                "http://192.168.1.16:17202/api/picture/file/thumb?fileName=${article.cover.fileName}",
                 fit: BoxFit.fill,
               ),
               title: Text(article.title),
