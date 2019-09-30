@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
+import 'package:learning_flutter/doc/cookbook/persistence/reading_writing_files/cookbook__persistence__reading_writing_files.dart';
 import 'package:learning_flutter/doc/cookbook/persistence/sqlite/cookbook__persistence__sqlite.dart';
 
 /// https://flutter.dev/docs/cookbook/persistence
 class CookbookPersistence extends StatelessWidget {
   final List<AppMenu> _menus = [
     AppMenu(title: "Persist Data With SQLite", widget: CookbookPersistenceSqlite()),
+    AppMenu(title: "Read And Write Files", widget: CookbookPersistenceReadingWritingFiles()),
   ];
 
   @override

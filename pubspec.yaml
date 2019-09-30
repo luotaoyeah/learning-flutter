@@ -28,6 +28,7 @@ dependencies:
   json_annotation: ^3.0.1
   transparent_image: ^1.0.0
   cached_network_image: ^2.0.0
+  path_provider: ^1.6.5
 
 dev_dependencies:
   flutter_test:
