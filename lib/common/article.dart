@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:learning_flutter/common/picture.dart';
+import 'package:learning_flutter/common/video.dart';
 
 part 'article.g.dart';
 
@@ -10,6 +11,7 @@ class Article {
   String remoteUrl;
   Picture cover;
   List<Picture> pictures;
+  List<Video> videos;
   bool isVR;
   bool is3D;
   int type;
@@ -23,6 +25,7 @@ class Article {
       this.remoteUrl,
       this.cover,
       this.pictures,
+      this.videos,
       this.isVR,
       this.is3D,
       this.type,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/article.dart';
 import 'package:learning_flutter/common/page.dart';
+import 'package:learning_flutter/common/video.dart';
 import 'package:learning_flutter/service/article.service.dart';
 
 /// https://flutter.dev/docs/cookbook/plugins/play-video
@@ -116,6 +117,11 @@ class _CookbookPluginsPlayVideoState extends State<CookbookPluginsPlayVideo> {
   }
 
   void _handleArticleTap(Article article) {
-    // TODO
+    if ((article.videos?.length ?? 0) > 0) {
+      final Video video = article.videos[0];
+      if (video.fileName != null && video.fileName.isNotEmpty) {
+        print(video.fileName);
+      }
+    }
   }
 }

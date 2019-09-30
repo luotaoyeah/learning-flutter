@@ -18,6 +18,10 @@ Article _$ArticleFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Picture.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    videos: (json['videos'] as List)
+        ?.map(
+            (e) => e == null ? null : Video.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     isVR: json['isVR'] as bool,
     is3D: json['is3D'] as bool,
     type: json['type'] as int,
@@ -33,6 +37,7 @@ Map<String, dynamic> _$ArticleToJson(Article instance) => <String, dynamic>{
       'remoteUrl': instance.remoteUrl,
       'cover': instance.cover?.toJson(),
       'pictures': instance.pictures?.map((e) => e?.toJson())?.toList(),
+      'videos': instance.videos?.map((e) => e?.toJson())?.toList(),
       'isVR': instance.isVR,
       'is3D': instance.is3D,
       'type': instance.type,
