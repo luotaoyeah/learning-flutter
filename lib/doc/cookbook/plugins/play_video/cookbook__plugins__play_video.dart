@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/article.dart';
 import 'package:learning_flutter/common/page.dart';
 import 'package:learning_flutter/common/video.dart';
+import 'package:learning_flutter/doc/cookbook/plugins/play_video/cookbook__plugins__play_video.01.dart';
 import 'package:learning_flutter/service/article.service.dart';
 
-/// https://flutter.dev/docs/cookbook/plugins/play-video
+/// TODO https://flutter.dev/docs/cookbook/plugins/play-video
 class CookbookPluginsPlayVideo extends StatefulWidget {
   @override
   _CookbookPluginsPlayVideoState createState() => _CookbookPluginsPlayVideoState();
@@ -120,7 +121,11 @@ class _CookbookPluginsPlayVideoState extends State<CookbookPluginsPlayVideo> {
     if ((article.videos?.length ?? 0) > 0) {
       final Video video = article.videos[0];
       if (video.fileName != null && video.fileName.isNotEmpty) {
-        print(video.fileName);
+        Navigator.of(context).push(
+          PageRouteBuilder(
+            pageBuilder: (_, __, ___) => CookbookPluginsPlayVideo01(article: article),
+          ),
+        );
       }
     }
   }
