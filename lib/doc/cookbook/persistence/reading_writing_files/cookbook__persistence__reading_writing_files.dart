@@ -66,7 +66,7 @@ class CounterStorage {
     return directory.path;
   }
 
-  /// /data/data/me.luotao.learning_flutter/app_flutter/counter.txt
+  /// 从 android studio 中查看到的文件地址: /data/data/me.luotao.learning_flutter/app_flutter/counter.txt
   Future<File> get _localFile async {
     final String path = await _localPath;
     return File("$path/counter.txt");
