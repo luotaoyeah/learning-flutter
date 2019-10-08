@@ -4,6 +4,14 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/android.iml" filepath="$PROJECT_DIR$/android.iml" group="android" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="android/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1500573722/path_provider.iml" filepath="$PROJECT_DIR$/.idea/modules/1500573722/path_provider.iml" group="android/path_provider" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2101171130/path_provider_macos.iml" filepath="$PROJECT_DIR$/.idea/modules/-2101171130/path_provider_macos.iml" group="android/path_provider_macos" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1848700197/shared_preferences.iml" filepath="$PROJECT_DIR$/.idea/modules/-1848700197/shared_preferences.iml" group="android/shared_preferences" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1949992329/shared_preferences_macos.iml" filepath="$PROJECT_DIR$/.idea/modules/1949992329/shared_preferences_macos.iml" group="android/shared_preferences_macos" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1643158378/shared_preferences_web.iml" filepath="$PROJECT_DIR$/.idea/modules/1643158378/shared_preferences_web.iml" group="android/shared_preferences_web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1745230718/sqflite.iml" filepath="$PROJECT_DIR$/.idea/modules/1745230718/sqflite.iml" group="android/sqflite" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/275274961/video_player.iml" filepath="$PROJECT_DIR$/.idea/modules/275274961/video_player.iml" group="android/video_player" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-321122066/video_player_web.iml" filepath="$PROJECT_DIR$/.idea/modules/-321122066/video_player_web.iml" group="android/video_player_web" />
     </modules>
   </component>
 </project>
