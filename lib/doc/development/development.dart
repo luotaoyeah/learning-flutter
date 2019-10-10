@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/common/app_menu.dart';
-import 'package:learning_flutter/doc/development/data_and_backend/02_02.dart';
-import 'package:learning_flutter/doc/development/ui/02_01.dart';
+import 'package:learning_flutter/doc/development/data_and_backend/development__data_and_backend.dart';
+import 'package:learning_flutter/doc/development/ui/development__ui.dart';
 
 /// https://flutter.dev/docs/development
-class X02 extends StatelessWidget {
+class Development extends StatelessWidget {
   final List<AppMenu> _menus = [
-    AppMenu(title: "User Interface", widget: X0201()),
-    AppMenu(title: "Data & Backend", widget: X0202()),
+    AppMenu(title: "User Interface", widget: DevelopmentUi()),
+    AppMenu(title: "Data & Backend", widget: DevelopmentDataAndBackend()),
   ];
 
   @override

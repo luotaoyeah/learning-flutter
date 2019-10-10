@@ -3,7 +3,7 @@ import 'package:learning_flutter/common/app_menu.dart';
 import 'package:learning_flutter/doc/development/data_and_backend/json/02_02_03.dart';
 
 /// https://flutter.dev/docs/development/data-and-backend
-class X0202 extends StatelessWidget {
+class DevelopmentDataAndBackend extends StatelessWidget {
   final List<AppMenu> _menus = [
     AppMenu(title: "JSON And Serialization", widget: X020203()),
   ];

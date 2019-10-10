@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '02_01_01_05.01.dart';
-import '02_01_01_05.02.dart';
+import 'development__ui__widgets_intro_05.01.dart';
+import 'development__ui__widgets_intro_05.02.dart';
 
 /// https://flutter.dev/docs/development/ui/widgets-intro#changing-widgets-in-response-to-input
 class X02010105 extends StatelessWidget {

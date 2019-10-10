@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// https://flutter.dev/docs/development/ui/widgets-intro#hello-world
-class X02010101 extends StatelessWidget {
+class DevelopmentUiWidgetsIntroHelloWorld extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

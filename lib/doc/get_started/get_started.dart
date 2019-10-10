@@ -2,7 +2,7 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
 /// https://flutter.dev/docs/get-started/install
-class X01 extends StatelessWidget {
+class GetStarted extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RandomWords();

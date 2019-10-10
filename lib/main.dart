@@ -4,8 +4,8 @@ import 'package:learning_flutter/doc/cookbook/cookbook.dart';
 import 'package:learning_flutter/doc/cookbook/navigation/named_routes/03_08_03.dart';
 import 'package:learning_flutter/doc/cookbook/navigation/navigate_with_arguments/03_08_04.01.dart';
 import 'package:learning_flutter/doc/cookbook/navigation/navigate_with_arguments/03_08_04.02.dart';
-import 'package:learning_flutter/doc/development/02.dart';
-import 'package:learning_flutter/doc/get_started/01.dart';
+import 'package:learning_flutter/doc/development/development.dart';
+import 'package:learning_flutter/doc/get_started/get_started.dart';
 
 void main() => runApp(App());
 
@@ -45,9 +45,9 @@ class Home extends StatefulWidget {
 
 class HomeState extends State<Home> {
   final List<AppMenu> _menus = [
-    AppMenu(title: "Get Started", widget: X01()),
+    AppMenu(title: "Get Started", widget: GetStarted()),
     AppMenu(title: "Cookbook", widget: Cookbook()),
-    AppMenu(title: "Development", widget: X02()),
+    AppMenu(title: "Development", widget: Development()),
   ];
 
   @override

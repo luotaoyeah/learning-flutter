@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '02_01_01_06_product.dart';
+import 'development__ui__widgets_intro__bringing_it_all_together__product.dart';
 
 class X02010106ShoppingListItem extends StatelessWidget {
   final Product product;
