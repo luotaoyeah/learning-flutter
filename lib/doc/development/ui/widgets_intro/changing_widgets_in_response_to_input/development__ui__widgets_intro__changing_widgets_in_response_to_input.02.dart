@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
-class X0201010502 extends StatefulWidget {
+class DevelopmentUiWidgetsIntroChangingWidgetsInResponseToInput02 extends StatefulWidget {
   @override
-  State<X0201010502> createState() => _X0201010502State();
+  _DevelopmentUiWidgetsIntroChangingWidgetsInResponseToInput02State createState() =>
+      _DevelopmentUiWidgetsIntroChangingWidgetsInResponseToInput02State();
 }
 
-class _X0201010502State extends State<X0201010502> {
+class _DevelopmentUiWidgetsIntroChangingWidgetsInResponseToInput02State
+    extends State<DevelopmentUiWidgetsIntroChangingWidgetsInResponseToInput02> {
   int _counter = 0;
 
   void _increment() {
@@ -18,13 +20,9 @@ class _X0201010502State extends State<X0201010502> {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
-        children: <Widget>[
-          CounterDisplay(
-            count: _counter,
-          ),
-          CounterIncrementor(
-            onPressed: _increment,
-          ),
+        children: [
+          CounterDisplay(count: _counter),
+          CounterIncrementor(onPressed: _increment),
         ],
       ),
     );

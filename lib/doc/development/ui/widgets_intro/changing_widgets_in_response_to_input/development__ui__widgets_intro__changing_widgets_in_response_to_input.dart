@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'development__ui__widgets_intro_05.01.dart';
-import 'development__ui__widgets_intro_05.02.dart';
+import 'development__ui__widgets_intro__changing_widgets_in_response_to_input.01.dart';
+import 'development__ui__widgets_intro__changing_widgets_in_response_to_input.02.dart';
 
 /// https://flutter.dev/docs/development/ui/widgets-intro#changing-widgets-in-response-to-input
-class X02010105 extends StatelessWidget {
+class DevelopmentUiWidgetsIntroChangingWidgetsInResponseToInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,9 +18,9 @@ class X02010105 extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Divider(),
-            X0201010501(),
+            DevelopmentUiWidgetsIntroChangingWidgetsInResponseToInput01(),
             Divider(),
-            X0201010502(),
+            DevelopmentUiWidgetsIntroChangingWidgetsInResponseToInput02(),
             Divider(),
           ],
         ),
