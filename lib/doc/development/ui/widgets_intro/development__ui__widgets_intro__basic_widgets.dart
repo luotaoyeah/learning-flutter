@@ -21,7 +21,7 @@ class DevelopmentUiWidgetsIntroBasicWidgets extends StatelessWidget {
               child: Center(
                 child: Text("HELLO　WORLD"),
               ),
-            )
+            ),
           ],
         ),
       ),

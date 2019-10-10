@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// https://flutter.dev/docs/development/ui/widgets-intro#using-material-components
-class X02010103 extends StatelessWidget {
+class DevelopmentUiWidgetsIntroUsingMaterialComponents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,11 +16,14 @@ class X02010103 extends StatelessWidget {
           'Using Material Components',
           style: TextStyle(letterSpacing: -0.5),
         ),
-        actions: <Widget>[
+        actions: [
           IconButton(
-            icon: Icon(Icons.search),
+            icon: Icon(
+              Icons.search,
+              color: Colors.white,
+            ),
             onPressed: null,
-          )
+          ),
         ],
       ),
       body: Center(
