@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// https://flutter.dev/docs/development/ui/widgets-intro#basic-widgets
-class X02010102 extends StatelessWidget {
+class DevelopmentUiWidgetsIntroBasicWidgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,9 +11,9 @@ class X02010102 extends StatelessWidget {
       body: Material(
         child: Column(
           children: <Widget>[
-            _X01(
+            _MyAppBar(
               title: Text(
-                "MY TITLE",
+                "Basic Widgets",
                 style: Theme.of(context).primaryTextTheme.title,
               ),
             ),
@@ -29,28 +29,39 @@ class X02010102 extends StatelessWidget {
   }
 }
 
-class _X01 extends StatelessWidget {
+class _MyAppBar extends StatelessWidget {
   final Widget title;
 
-  _X01({this.title});
+  _MyAppBar({this.title});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 56,
-      padding: EdgeInsets.symmetric(horizontal: 8),
-      decoration: BoxDecoration(color: Colors.blue),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
+      margin: const EdgeInsets.only(top: 50),
+      decoration: BoxDecoration(
+        color: Colors.blue[400],
+        boxShadow: [
+          BoxShadow(blurRadius: 3, offset: Offset(0, 3), color: Colors.black12),
+        ],
+      ),
       child: Row(
         children: <Widget>[
           IconButton(
             icon: Icon(
-              Icons.menu,
+              Icons.arrow_back,
               color: Colors.white,
             ),
-            onPressed: null,
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
           ),
           Expanded(
-            child: title,
+            child: Container(
+              child: title,
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+            ),
           ),
           IconButton(
             icon: Icon(

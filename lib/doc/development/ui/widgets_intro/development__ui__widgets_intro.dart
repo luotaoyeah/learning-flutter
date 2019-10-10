@@ -3,7 +3,7 @@ import 'package:learning_flutter/common/app_menu.dart';
 import 'package:learning_flutter/doc/development/ui/widgets_intro/bringing_it_all_together/development__ui__widgets_intro__bringing_it_all_together.dart';
 import 'package:learning_flutter/doc/development/ui/widgets_intro/changing_widgets_in_response_to_input/development__ui__widgets_intro_05.dart';
 import 'package:learning_flutter/doc/development/ui/widgets_intro/development__ui__widgets_intro__hello_world.dart';
-import 'package:learning_flutter/doc/development/ui/widgets_intro/development__ui__widgets_intro.02.dart';
+import 'package:learning_flutter/doc/development/ui/widgets_intro/development__ui__widgets_intro__basic_widgets.dart';
 import 'package:learning_flutter/doc/development/ui/widgets_intro/development__ui__widgets_intro.03.dart';
 import 'package:learning_flutter/doc/development/ui/widgets_intro/development__ui__widgets_intro.04.dart';
 import 'package:learning_flutter/doc/development/ui/widgets_intro/development__ui__widgets_intro.07.dart';
@@ -12,7 +12,7 @@ import 'package:learning_flutter/doc/development/ui/widgets_intro/development__u
 class DevelopmentUiWidgetsIntro extends StatelessWidget {
   final List<AppMenu> _menus = [
     AppMenu(title: 'Hello World', widget: DevelopmentUiWidgetsIntroHelloWorld()),
-    AppMenu(title: 'Basic Widgets', widget: X02010102()),
+    AppMenu(title: 'Basic Widgets', widget: DevelopmentUiWidgetsIntroBasicWidgets()),
     AppMenu(title: 'Using Material Components', widget: X02010103()),
     AppMenu(title: 'Handling Gestures', widget: X02010104()),
     AppMenu(title: 'Changing Widgets In Response To Input', widget: X02010105()),
