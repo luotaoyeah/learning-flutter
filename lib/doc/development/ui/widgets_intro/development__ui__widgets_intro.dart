@@ -16,7 +16,7 @@ class DevelopmentUiWidgetsIntro extends StatelessWidget {
     AppMenu(title: 'Using Material Components', widget: DevelopmentUiWidgetsIntroUsingMaterialComponents()),
     AppMenu(title: 'Handling Gestures', widget: DevelopmentUiWidgetsIntroHandlingGestures()),
     AppMenu(title: 'Changing Widgets In Response To Input', widget: DevelopmentUiWidgetsIntroChangingWidgetsInResponseToInput()),
-    AppMenu(title: 'Bringing It All Together', widget: X02010106()),
+    AppMenu(title: 'Bringing It All Together', widget: DevelopmentUiWidgetsIntroBringingItAllTogether()),
     AppMenu(title: 'Responding To Widget Lifecycle Events', widget: X02010107()),
   ];
 
