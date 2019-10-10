@@ -5,7 +5,7 @@ import 'package:learning_flutter/doc/development/ui/widgets_intro/changing_widge
 import 'package:learning_flutter/doc/development/ui/widgets_intro/development__ui__widgets_intro__hello_world.dart';
 import 'package:learning_flutter/doc/development/ui/widgets_intro/development__ui__widgets_intro__basic_widgets.dart';
 import 'package:learning_flutter/doc/development/ui/widgets_intro/development__ui__widgets_intro__using_material_components.dart';
-import 'package:learning_flutter/doc/development/ui/widgets_intro/development__ui__widgets_intro.04.dart';
+import 'package:learning_flutter/doc/development/ui/widgets_intro/development__ui__widgets_intro__handling_gestures.dart';
 import 'package:learning_flutter/doc/development/ui/widgets_intro/development__ui__widgets_intro.07.dart';
 
 /// https://flutter.dev/docs/development/ui/widgets-intro
@@ -14,7 +14,7 @@ class DevelopmentUiWidgetsIntro extends StatelessWidget {
     AppMenu(title: 'Hello World', widget: DevelopmentUiWidgetsIntroHelloWorld()),
     AppMenu(title: 'Basic Widgets', widget: DevelopmentUiWidgetsIntroBasicWidgets()),
     AppMenu(title: 'Using Material Components', widget: DevelopmentUiWidgetsIntroUsingMaterialComponents()),
-    AppMenu(title: 'Handling Gestures', widget: X02010104()),
+    AppMenu(title: 'Handling Gestures', widget: DevelopmentUiWidgetsIntroHandlingGestures()),
     AppMenu(title: 'Changing Widgets In Response To Input', widget: X02010105()),
     AppMenu(title: 'Bringing It All Together', widget: X02010106()),
     AppMenu(title: 'Responding To Widget Lifecycle Events', widget: X02010107()),

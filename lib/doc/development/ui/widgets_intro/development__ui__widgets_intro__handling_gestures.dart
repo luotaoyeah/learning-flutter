@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// https://flutter.dev/docs/development/ui/widgets-intro#handling-gestures
-class X02010104 extends StatelessWidget {
+class DevelopmentUiWidgetsIntroHandlingGestures extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,18 +12,26 @@ class X02010104 extends StatelessWidget {
         ),
       ),
       body: Center(
-        child: _X01(),
+        child: _MyButton(),
       ),
     );
   }
 }
 
-class _X01 extends StatelessWidget {
+class _MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print("CLICK");
+        Scaffold.of(context).removeCurrentSnackBar();
+        Scaffold.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              'CLICKED',
+              style: TextStyle(fontFamily: 'simfang'),
+            ),
+          ),
+        );
       },
       child: Container(
         child: Center(
@@ -35,9 +43,12 @@ class _X01 extends StatelessWidget {
           ),
         ),
         padding: const EdgeInsets.all(8),
-        height: 32,
+        height: 36,
         width: 100,
-        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(3)), color: Colors.green),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(3)),
+          color: Colors.green,
+        ),
       ),
     );
   }
